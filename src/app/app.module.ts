@@ -6,14 +6,8 @@ import { AppComponent } from './app.component';
 import { ChildComponent } from './child.component';
 
 @NgModule({
-  declarations: [
-    AppComponent, ChildComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [],
+  declarations: [AppComponent, ChildComponent],
+  imports: [BrowserModule,FormsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
