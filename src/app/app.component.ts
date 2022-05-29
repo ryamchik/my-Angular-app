@@ -1,5 +1,6 @@
 import { Component, IterableDiffers } from '@angular/core';
 import { DataService } from './data.service';
+import { NgModel} from '@angular/forms';
 
 @Component({
   selector: 'app-root',

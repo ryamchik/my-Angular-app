@@ -5,19 +5,17 @@
     <div class="form-inline">
         <div class="form-group">
             <div class="col-md-8">
-                <input class="form-control" name="name" [(ngModel)]="text" placeholder = "Название" />
-                
+                <input class="form-control" [(ngModel)]="text" placeholder = "Название" #name="ngModel" required />
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-6">
-                <input type="number" name="price" class="form-control" [(ngModel)]="price" placeholder="Цена" />
-
+                <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена" #sum="ngModel" required />
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-8">
-                <button class="btn btn-default" (click)="addItem(text, price)">Добавить</button>
+                <button [disabled]="name.invalid || sum.invalid" class="btn btn-default" (click)="addItem(text, price)">Добавить</button>
             </div>
         </div>
     </div>
