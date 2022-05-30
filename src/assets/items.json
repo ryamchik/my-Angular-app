@@ -1,0 +1,18 @@
+{
+    "itemList":
+    [{
+        "purchase": "Хлеб",
+        "price": 35,
+        "done": false
+    },
+    {
+        "purchase": "Молоко",
+        "price": 69,
+        "done": false
+    },
+    {
+        "purchase": "Яйца",
+        "price": 77,
+        "done": false
+    }]
+}

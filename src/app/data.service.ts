@@ -1,18 +1,7 @@
-class Item{
-    purchase: string;
-    done: boolean;
-    price: number;
-    
-    constructor(purchase: string, price: number) {
-      this.purchase = purchase;
-      this.price = price;
-      this.done = false;
-    }
-}
+import { Item } from "./item";
 
 export class DataService{
     totalSum: number = 0;
-  
     items: Item[] = [];
         
     addItem(text: string, price: number): void {

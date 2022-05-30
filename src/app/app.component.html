@@ -36,4 +36,4 @@
         </tbody>
     </table>
 </div>
-<child-comp [totalPrice]=getTotalSum()></child-comp>
+<child-comp [totalPrice]=getTotalSum() (emitter)="addJSONItem($event)"></child-comp>

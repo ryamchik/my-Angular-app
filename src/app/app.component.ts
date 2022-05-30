@@ -1,12 +1,14 @@
-import { Component, IterableDiffers } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from './data.service';
 import { NgModel} from '@angular/forms';
+import { HttpService } from './http.service';
+import { Item } from './item';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [DataService]
+  providers: [DataService, HttpService]
 })
 export class AppComponent {
   text: string = "";
@@ -21,5 +23,10 @@ export class AppComponent {
   }
   getTotalSum(): number{
     return this.dataService.getTotalSum(); 
+  }
+  addJSONItem(shoppingList: Item[]){
+    shoppingList.forEach(element => {
+      this.items.push(element);
+    });
   }
 }
