@@ -2,6 +2,7 @@ import { Item } from "./item";
 
 export class DataService{
     totalSum: number = 0;
+
     items: Item[] = [];
         
     addItem(text: string, price: number): void {
